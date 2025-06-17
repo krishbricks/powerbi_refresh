@@ -7,9 +7,6 @@ from datetime import datetime
 
 session = requests.Session()
 
-
-
-
 # === Utility to acquire token ===
 def get_access_token(client_id, client_secret, tenant_id):
    scope = ['https://analysis.windows.net/powerbi/api/.default']
@@ -22,8 +19,6 @@ def get_access_token(client_id, client_secret, tenant_id):
    if 'access_token' not in result:
        raise Exception("Failed to acquire access token")
    return result['access_token']
-
-
 
 
 # === Method 1: Trigger Refresh ===
@@ -58,8 +53,6 @@ def trigger_refresh(workspace_id, dataset_id, client_id, client_secret, tenant_i
 
 
    return True  # Just acknowledge it triggered
-
-
 
 
 # === Method 2: Check Refresh Status Until Done ===
@@ -105,9 +98,7 @@ def wait_for_refresh_completion(workspace_id, dataset_id, client_id, client_secr
        # Sleep and check again
        time.sleep(poll_interval)
 
-
 # === Example Usage ===
-
 
 # == Credentials ==
 #client_secret = dbutils.secrets.get(scope="",key="")

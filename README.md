@@ -1,3 +1,6 @@
+<!-- Markdown approach -->
+![Animated Diagram] https://raw.githubusercontent.com/krishbricks/powerbi_refresh/48b1e2506b41ede9bb3530a1b8900c112d2c64d4/app/excalidraw-animate.svg
+
 Complete/Selective Refresh Power BI Model from Azure Databricks
 
 🔍 Introduction
